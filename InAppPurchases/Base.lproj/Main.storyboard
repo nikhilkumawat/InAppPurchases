@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InAppPurchases" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arcade Time Background" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-JK-jGS">
+                                <rect key="frame" x="0.0" y="30" width="375" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-7k-YUb">
+                                <rect key="frame" x="16" y="36" width="343" height="591"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wtl-bt-PXP">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="purchaseCell" id="V9l-vV-IyS" userLabel="purchaseCell" customClass="PurchaseCell" customModule="InAppPurchases" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-pi-cMx" customClass="CustomView" customModule="InAppPurchases" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfp-aO-vWn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Arcade-1" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-Fe-k73">
+                                                            <rect key="frame" x="16" y="8" width="128" height="115"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haj-4i-yeR">
+                                                            <rect key="frame" x="8" y="131" width="144" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="haj-4i-yeR" firstAttribute="top" secondItem="Auy-Fe-k73" secondAttribute="bottom" constant="8" id="KRZ-bJ-e8h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Auy-Fe-k73" secondAttribute="trailing" constant="16" id="LtJ-2Q-3k8"/>
+                                                        <constraint firstItem="Auy-Fe-k73" firstAttribute="top" secondItem="Bfp-aO-vWn" secondAttribute="top" constant="8" id="Smk-Ah-l5n"/>
+                                                        <constraint firstItem="Auy-Fe-k73" firstAttribute="leading" secondItem="Bfp-aO-vWn" secondAttribute="leading" constant="16" id="UTt-us-oIV"/>
+                                                        <constraint firstItem="haj-4i-yeR" firstAttribute="leading" secondItem="Bfp-aO-vWn" secondAttribute="leading" constant="8" id="ebi-lm-aj5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="haj-4i-yeR" secondAttribute="trailing" constant="8" id="fmH-av-gZ2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="haj-4i-yeR" secondAttribute="bottom" constant="8" id="pch-l2-E7C"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Bfp-aO-vWn" secondAttribute="bottom" id="8Iv-cY-kvi"/>
+                                            <constraint firstItem="Bfp-aO-vWn" firstAttribute="leading" secondItem="V9l-vV-IyS" secondAttribute="leading" id="CGS-ZV-IfQ"/>
+                                            <constraint firstItem="aJh-pi-cMx" firstAttribute="trailing" secondItem="Bfp-aO-vWn" secondAttribute="trailing" id="M9h-qh-cAX"/>
+                                            <constraint firstItem="Bfp-aO-vWn" firstAttribute="top" secondItem="V9l-vV-IyS" secondAttribute="top" id="bsk-fF-FyM"/>
+                                            <constraint firstItem="aJh-pi-cMx" firstAttribute="top" secondItem="Bfp-aO-vWn" secondAttribute="top" id="i0G-ze-sJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bfp-aO-vWn" secondAttribute="trailing" id="qmg-SM-S92"/>
+                                            <constraint firstItem="aJh-pi-cMx" firstAttribute="leading" secondItem="Bfp-aO-vWn" secondAttribute="leading" id="u6Z-Yr-Yih"/>
+                                            <constraint firstItem="aJh-pi-cMx" firstAttribute="bottom" secondItem="Bfp-aO-vWn" secondAttribute="bottom" id="yr4-Z4-tWn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="purchaseImage" destination="Auy-Fe-k73" id="i8e-mi-RFt"/>
+                                            <outlet property="purchaseLbl" destination="haj-4i-yeR" id="7rL-wb-JZJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otg-sn-vIf">
+                                <rect key="frame" x="295" y="626" width="64" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lb7-7k-YUb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="7In-8P-zLz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lb7-7k-YUb" secondAttribute="trailing" constant="16" id="GSI-9A-K7d"/>
+                            <constraint firstAttribute="trailing" secondItem="Otg-sn-vIf" secondAttribute="trailing" constant="16" id="LQS-ER-v7O"/>
+                            <constraint firstItem="Otg-sn-vIf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Nng-Id-0zC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lb7-7k-YUb" secondAttribute="bottom" constant="40" id="RPb-vF-BUh"/>
+                            <constraint firstAttribute="bottom" secondItem="Otg-sn-vIf" secondAttribute="bottom" constant="8" id="oG0-Hk-hL7"/>
+                            <constraint firstItem="Lb7-7k-YUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pve-l2-K13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Lb7-7k-YUb" id="Cg2-Bg-flJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arcade Time Background" width="1242" height="2208"/>
+        <image name="Arcade-1" width="380" height="355"/>
+    </resources>
+</document>
